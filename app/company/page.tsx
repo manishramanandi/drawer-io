@@ -1,14 +1,11 @@
 import { AppSidebar } from "@/components/app-sidebar"
 import EmptyState from "@/components/dashboard/emptyState"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
-import { Package, Plus } from "lucide-react"
 
 export default function Page() {
   return (
