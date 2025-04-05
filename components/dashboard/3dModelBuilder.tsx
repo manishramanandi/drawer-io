@@ -3,7 +3,6 @@
 import { useState, useRef, Suspense, useEffect } from 'react';
 import processImage from '@/actions/processImage'; // Your server action
 import Image from 'next/image';
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
