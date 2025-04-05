@@ -1,14 +1,19 @@
 "use client";
 
+import Image from 'next/image';
 import { useEffect, useRef } from "react";
+import { useRouter } from 'next/navigation';
 import { motion, useScroll, useTransform, useAnimation } from "framer-motion";
 import { ArrowRight, ShoppingBag, Store, Search, Box, Phone, DollarSign, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import LogoIcon from "@/public/logo.svg"
+import ProductViewer from '@/components/productViewer';
 
 export default function Home() {
   const controls = useAnimation();
   const { scrollYProgress } = useScroll();
+  const router = useRouter()
   
   // References for sections - add proper HTMLDivElement type
   const heroRef = useRef<HTMLDivElement>(null);
@@ -49,10 +54,16 @@ export default function Home() {
   return (
     <div className="relative p overflow-hidden">
       {/* Navbar */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+      <nav className="fixed top-0 w-full p-2 bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
         <div className="container mx-auto flex justify-between items-center py-4">
           <div className="flex items-center gap-2">
-            <Box className="text-blue-600" />
+          <Image
+            priority
+            src={LogoIcon}
+            alt="Follow us on Twitter"
+            width={30}
+            height={30}
+          />
             <h1 className="text-xl font-bold">DRAWER.IO</h1>
           </div>
           
@@ -93,11 +104,21 @@ export default function Home() {
             Online shopping but closer
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="group">
+            <Button
+              size="lg"
+              className="group"
+              onClick={() => router.push('/chat')}
+            >
               Continue as a Buyer
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition" />
             </Button>
-            <Button size="lg" variant="outline" className="group">
+
+            <Button
+              size="lg"
+              variant="outline"
+              className="group"
+              onClick={() => router.push('/company')}
+            >
               Join as a Seller
               <Store className="ml-2 w-4 h-4 group-hover:translate-x-1 transition" />
             </Button>
@@ -105,20 +126,19 @@ export default function Home() {
         </motion.div>
         
         <motion.div 
-          className="flex-1 mt-12 md:mt-0"
+          className="flex-1 mt-12 md:mt-6"
           style={{ y }}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
           <div className="relative w-full h-96">
-            {/* Placeholder for 3D model */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl overflow-hidden shadow-xl flex items-center justify-center">
-              <Box className="w-32 h-32 text-blue-500 animate-pulse" />
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-400 rounded-full opacity-20 blur-2xl"></div>
-              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-400 rounded-full opacity-20 blur-2xl"></div>
-            </div>
+          {/* 3D Model background */}
+          <div className="absolute inset-0 z-0">
+          <ProductViewer modelPath="/model/monitor/monitor.gltf"/>
           </div>
+          </div>
+
         </motion.div>
       </section>
       
@@ -525,7 +545,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Box className="text-blue-400" />
+              <Image
+                priority
+                src={LogoIcon}
+                alt="Follow us on Twitter"
+                width={30}
+                height={30}
+              />
                 <h3 className="text-xl font-bold">DRAWER.IO</h3>
               </div>
               <p className="text-gray-400 mb-4">
