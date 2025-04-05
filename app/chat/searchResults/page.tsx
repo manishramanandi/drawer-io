@@ -10,6 +10,8 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Separator } from '@/components/ui/separator';
 import { Input } from '@/components/ui/input';
 import { SearchIcon, FilterIcon } from 'lucide-react';
+import { Suspense } from 'react';
+import DashboardLoading from './loading';
 
 
 // Sample product type
@@ -130,6 +132,7 @@ const Dashboard = () => {
   };
 
   return (
+    <Suspense fallback={<DashboardLoading />}>
     <div className="min-h-screen bg-slate-50">
       {/* Header */}
       <header className="bg-white shadow-sm py-4">
@@ -280,6 +283,7 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
+    </Suspense>
   );
 };
 
