@@ -2,21 +2,15 @@
 
 import * as React from "react"
 import {
-  AudioWaveform,
+  BellIcon,
   BookOpen,
-  Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
+  ChartBarBig,
   ListCollapseIcon,
-  Map,
-  PieChart,
   Settings2,
-  SquareTerminal,
 } from "lucide-react"
 
-import { NavMain } from "@/components/nav-main"
-import { NavUser } from "@/components/nav-user"
+import { NavMain } from "@/components/dashboard/nav-main"
+import { NavUser } from "@/components/dashboard/nav-user"
 import {
   Sidebar,
   SidebarContent,
@@ -59,6 +53,16 @@ const data = {
           url: "#",
         },
       ],
+    },
+    {
+      title: "Analytics",
+      url: "#",
+      icon: ChartBarBig,
+    },
+    {
+      title: "Updates",
+      url: "#",
+      icon: BellIcon,
     },
     {
       title: "Settings",
