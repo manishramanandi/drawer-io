@@ -1,4 +1,7 @@
-# 🛍️ DRAWER.IO
+<div align='center'>
+
+# DRAWER.IO
+![logo-paypal](https://github.com/user-attachments/assets/8017613c-31bb-4928-96d1-ba0caae4228b)
 
 Online shopping, but closer. Drawer.io is an immersive web platform where buyers and sellers interact through stunning 3D product visualizations. Built with bleeding-edge technologies, it brings the feel of offline shopping into the digital world.
 
@@ -19,6 +22,7 @@ Online shopping, but closer. Drawer.io is an immersive web platform where buyers
 | 📦 Product Library Embedding (Planned) | 🔜 In Progress |
 
 ---
+</div>
 
 ## 🛠️ How to Run Locally
 
@@ -80,3 +84,4 @@ Made with ❤️ by:
 ---
 
 Enjoyed the project? Give us a ⭐ on GitHub!
+
