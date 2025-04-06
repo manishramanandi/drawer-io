@@ -41,7 +41,7 @@ const mockProducts: Product[] = [
     image: "/api/placeholder/400/400",
     description: "Ergonomic office chair with adjustable height and lumbar support. Designed for comfort during long work sessions.",
     color: "Black",
-    modelPath: "/models/chair.glb", // This would be your actual model path
+    modelPath: "/model/chair/chair.gltf", // This would be your actual model path
     rating: 4.5,
     reviewCount: 127,
     inStock: true,
@@ -59,7 +59,7 @@ const mockProducts: Product[] = [
     image: "/api/placeholder/400/400",
     description: "Rustic wooden coffee table with storage shelf underneath. Perfect centerpiece for any living room.",
     color: "Oak",
-    modelPath: "/models/table.glb",
+    modelPath: "/model/table/table.gltf",
     rating: 4.2,
     reviewCount: 89,
     inStock: true,
@@ -77,7 +77,7 @@ const mockProducts: Product[] = [
     image: "/api/placeholder/400/400",
     description: "Minimalist three-seater sofa with oak legs and comfortable cushions. Scandinavian design that fits any modern home.",
     color: "Light Gray",
-    modelPath: "/models/sofa.glb",
+    modelPath: "/model/sofa/sofa.gltf",
     rating: 4.8,
     reviewCount: 213,
     inStock: false,
@@ -95,7 +95,7 @@ const mockProducts: Product[] = [
     image: "/api/placeholder/400/400",
     description: "Modern floor lamp with adjustable arm and dimmable LED light. Energy efficient with customizable brightness.",
     color: "Brushed Nickel",
-    modelPath: "/models/lamp.glb",
+    modelPath: "/model/lamp/lamp.gltf",
     rating: 4.0,
     reviewCount: 67,
     inStock: true,
@@ -161,7 +161,7 @@ const ProductPage = () => {
               <Suspense fallback={<div className="w-full h-full flex items-center justify-center bg-slate-100">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
               </div>}>
-                {/* <ProductViewer modelPath={product.modelPath || ''} /> */}
+                <ProductViewer modelPath={product.modelPath || ""} />
               </Suspense>
             </div>
             <div className="p-4 flex justify-between items-center">
