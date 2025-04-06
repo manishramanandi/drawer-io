@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛍️ DRAWER.IO
 
-## Getting Started
+Online shopping, but closer. Drawer.io is an immersive web platform where buyers and sellers interact through stunning 3D product visualizations. Built with bleeding-edge technologies, it brings the feel of offline shopping into the digital world.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+| Feature                                | Status         |
+| -------------------------------------- | -------------- |
+| 🧊 Interactive 3D Product Viewer       | ✅ Implemented  |
+| 🎯 AI powered Product Search & Navigation         | 🔜 In Progress |
+| 🧑‍💼 Seller Company Pages             | ✅ Implemented  |
+| 🛒 Buyer/Seller User Paths             | ✅ Implemented  |
+| ⚙️ Dynamic GLTF Model Loading          | ✅ Implemented  |
+| 🤖 Using Hunyuan3d model to generate models from a single image  | ✅ Implemented  |
+| 🌐 Hero Section with CTA Routing       | ✅ Implemented  |
+| 🚀 Deployment-Ready Architecture       | ✅ Implemented  |
+| 📦 Product Library Embedding (Planned) | 🔜 In Progress |
+
+---
+
+## 🛠️ How to Run Locally
 
 ```bash
+# Clone the repository
+git clone https://github.com/manishramanandi/drawer-io.git
+cd drawer-io
+
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# The app will be live at:
+http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🗺️ Sitemap
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+/                   -> Landing Page with 3D Hero Section
+/chat/searchResults -> Buyer Flow
+/company            -> Seller Company Flow
+```
+---
 
-## Learn More
+## 🔮 Future Scopes
 
-To learn more about Next.js, take a look at the following resources:
+In the upcoming releases, we aim to launch a developer-focused **Drawer UI Library**, a plug-and-play toolkit that enables seamless integration of our 3D UI components into any e-commerce or portfolio platform. This library will empower devs to add immersive shopping experiences without rebuilding from scratch.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Features will include:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `<ProductViewer />` React component
+- ShadCN-compatible UI components
+- Model hosting + CDN fallback
+- Instant AR/VR-ready export for WebXR
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🏁 Hackathon Submission
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is a submission by **Team PayPal Mafia** for **Hackbyte 3.0**, hosted at **IIITDM Jabalpur**, organized by **The Programming Club IIITDM** and powered by **Major League Hacking (MLH)**.
+
+---
+
+## 🙌 Contributors
+
+Made with ❤️ by:
+
+<a href="https://github.com/manishramanandi/drawer-io/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=manishramanandi/drawer-io" />
+</a>
+
+> Special thanks to Blender, React Three Fiber, and the ShadCN UI ecosystem.
+
+---
+
+Enjoyed the project? Give us a ⭐ on GitHub!
